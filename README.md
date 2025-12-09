@@ -34,27 +34,27 @@ This approach transforms required annual documents into a unique data for cloud 
 
 The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
-[Breakdown by Count] [Breakdown by Market Cap]
+![Breakdown by Company Count](./Breakdown%20by%20Company%20Count.png) ![Breakdown by Market Cap](./Breakdown%20by%20Market%20Cap.png) 
 
 ### Cloud Adoption Trend (2020-2025)
 
-[Cloud Adoption Trend]
+![Cloud Adoption Trend](./Cloud%20Adoption%20Trend.png) 
 
 **Insight**: A 15+ percentage point increase in cloud risk disclosures over 5 years reflects accelerating enterprise cloud migration.
 
-[No Mention Graphic]
+![No Mention Graphic](./No%20Mention%20Graphic.png) 
+
+**Insight**: 25% of enterprises do not mention relying on cloud services or find it not as important.
 
 ### Provider Market Share (Among Specific Disclosures)
 
-[Provider Market Share]
-
-**Insight**: 25% of enterprises do not mention relying on cloud services or find it not as important.
+![Provider Market Share](./Provider%20Market%20Share.png) 
 
 *Note: Totals exceed 100% due to multi-cloud deployments.*
 
 ### Sector-Provider Dependency Heatmap
 
-[Sector-Provider Dependency Heatmap]
+![Sector-Provider Dependency Heatmap](./Sector-Provider%20Dependency%20Heatmap.png) 
 
 **Insight**: IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most pronounced in Communication and Consumer Discretionary sectors.
 
@@ -64,13 +64,13 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ### Summary by Provider
 
-[Summary by Provider]
+![Summary by Provider](./Summary%20by%20Provider.png) 
 
 ### AWS: DynamoDB/DNS Service Disruption (October 2025)
 
 **One of the largest cloud disruption in recent news.**
 
-[AWS Outage Summary]
+![AWS Outage Summary](./AWS%20Outage%20summary.png) 
 
 | Metric | Value |
 |--------|-------|
@@ -96,7 +96,7 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ### Azure: Firewall and Data Explorer Outage (June 2022)
 
-[Azure Outage Summary]
+![Azure Outage Summary](./Azure%20Outage%20Summary.png) 
 
 | Metric | Value |
 |--------|-------|
@@ -117,7 +117,7 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ### GCP: Fiber Cuts Network Disruption (June 2022)
 
-[GCP Outage Summary]
+![GCP Outage Summary](./GCP%20Outage%20Summary.png) 
 
 | Metric | Value |
 |--------|-------|
@@ -133,7 +133,8 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 ## Methodology
 
 ### 1. Data Extraction Pipeline
-[image of flowchart]
+![ETL Pipeline](./ETL%20Pipeline.png) 
+
 
 ### 2. Cloud Provider Detection
 
@@ -178,7 +179,7 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 ## Data Schema
 
 ### Entity Relationship Diagram
-[image of diagram]
+![Data Schema](./image%20of%20diagram.png) 
 
 ## Key Insights
 
@@ -237,76 +238,6 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 | Industrials | 19 | 6 | 3 | — | 1 |
 
 **Insight**: IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most pronounced in Communication and Consumer Discretionary sectors.
-
----
-
-## Outage Scenario Analysis
-
-### Summary by Provider
-
-| Provider | Total Downtime | Companies at Risk | Max Hourly Impact |
-|----------|---------------|-------------------|-------------------|
-| Azure | 68 hours | 81 | $60.84M |
-| AWS | 61 hours | 214 | $176.92M |
-| Salesforce | 21 hours | — | — |
-| IBM | 10 hours | 1 | — |
-| GCP | 3 hours | 62 | $98.16M |
-
-### AWS: Kinesis Event (November 2020)
-
-**The largest single-outage revenue risk in the dataset.**
-
-| Metric | Value |
-|--------|-------|
-| Duration | 17 hours |
-| Companies Affected | 214 |
-| Hourly Revenue at Risk | $176.92M |
-| **Total Revenue at Risk** | **$3.0B+** |
-
-**Top 5 Companies by Hourly Exposure:**
-
-| Company | Sector | Hourly Revenue at Risk |
-|---------|--------|------------------------|
-| Amazon | Consumer Discretionary | $72.8M |
-| Verizon | Communication | $15.4M |
-| T-Mobile | Communication | $9.3M |
-| Accenture | Information Technology | $7.4M |
-| Capital One | Financials | $4.5M |
-
-**Sector Breakdown:**
-- Consumer Discretionary: $83M/hour (led by Amazon)
-- Information Technology: $37M/hour
-- Communication: $36M/hour
-
-### Azure: Firewall and Data Explorer Outage (June 2022)
-
-| Metric | Value |
-|--------|-------|
-| Duration | 24 hours |
-| Companies Affected | 81 |
-| Hourly Revenue at Risk | $60.84M |
-| **Total Revenue at Risk** | **$1.46B** |
-
-**Top 5 Companies by Hourly Exposure:**
-
-| Company | Sector | Hourly Revenue at Risk |
-|---------|--------|------------------------|
-| Microsoft | Information Technology | $27.9M |
-| Nvidia | Information Technology | $6.9M |
-| Oracle | Information Technology | $6.0M |
-| Medtronic | Health Care | $3.7M |
-| ServiceNow | Information Technology | $1.3M |
-
-### GCP: Fiber Cuts Network Disruption (June 2022)
-
-| Metric | Value |
-|--------|-------|
-| Duration | 3 hours |
-| Companies Affected | 62 |
-| Hourly Revenue at Risk | $98.16M |
-| **Total Revenue at Risk** | **$294M** |
-
-**Notable Insight**: Despite GCP's smaller market share, its per-hour impact rivals AWS due to high-revenue companies like Alphabet (Google) being self-hosted on GCP infrastructure.
 
 ---
 
