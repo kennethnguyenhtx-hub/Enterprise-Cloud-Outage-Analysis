@@ -70,7 +70,7 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ![Sector-Provider Dependency Heatmap](./Sector-Provider%20Dependency%20Heatmap.png)
 
-> **Insight:** IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most pronounced in Communication and Consumer Discretionary sectors.
+> **Insight:** IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most seen in Communication and Consumer Discretionary sectors.
 
 ---
 
