@@ -16,7 +16,7 @@ Cloud-based infrastructure has become a core strategy for many modern enterprise
 This project answers the question: 
 > **How much revenue is at risk when cloud providers go down?**
 
-By parsing 12,000+ SEC 10-K filings from 2,500+ companies (2020–2025), I mapped each company's dependencies to specific cloud providers and calculated hourly revenue exposure during ~34 major outages.
+By parsing 12,000+ SEC 10-K filings from 2,500+ companies (2020–2025), I mapped each company's dependencies to specific cloud providers and calculated hourly revenue exposure during ~22 major outages.
 
 ---
 
@@ -237,7 +237,7 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 |--------|---------|---------|
 | SEC EDGAR API | 10-K filings (2020–2025) | ~12,000 documents |
 | Yahoo Finance (yfinance) | Company financials, sector classification | 2,500+ companies |
-| Public Outage Reports | Historical cloud outages | ~34 incidents |
+| Public Outage Reports | Historical cloud outages | ~22 incidents |
 
 ---
 
