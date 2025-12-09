@@ -207,15 +207,14 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 
 1. **Multi-Cloud Reality Understated:** Russell 3000 companies likely employ multi-cloud or hybrid architectures with failover capabilities. This analysis models a worst-case scenario where primary cloud dependencies experience complete service interruption without redundancy.
 
-2. **Revenue Timing Not Modeled:** Hourly revenue calculations assume uniform revenue distribution across all hours. In reality, a retail company's 1 AM outage impacts revenue differently than a 1 PM outage. Time-of-day and seasonality adjustments were not applied.
+2. **Revenue Timing Not Modeled:** Hourly revenue calculations assume uniform revenue distribution across all hours. In reality, a retail company's 1 AM outage impacts revenue differently than a 1 PM outage.
 
-3. **Provider Disclosure Gaps:** Companies in the "General Cloud" category (1,626) acknowledge cloud dependency but don't specify providers. This may reflect security-conscious disclosure practices (common in financial services) or multi-cloud strategies without a dominant provider.
+3. **Provider Disclosure Gaps:** Companies in the "General Cloud" category (1,626) acknowledge cloud dependency but don't specify providers. This may reflect security practices (common in financial services) or multi-cloud strategies without a dominant provider.
 
 4. **Competitor vs. Dependency Disambiguation:** While the context-scoring algorithm handles most edge cases, some misclassifications may occur when companies discuss cloud providers in mixed contexts.
 
 5. **2024 Revenue Baseline:** All revenue-at-risk calculations use 2024 annual revenue, which represents the most complete and recent fiscal year data available at time of analysis.
 
-6. **Sector Revenue Distribution:** Different sectors have varying revenue models. A subscription SaaS company may experience immediate revenue impact during an outage, while a manufacturing company with cloud-dependent logistics may see delayed effects.
 
 ---
 
@@ -228,7 +227,7 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 | Data Extraction | Python, SEC EDGAR API |
 | Text Processing | Pandas, Regex, NLTK |
 | Financial Data | yfinance |
-| Data Storage | PostgreSQL, CSV |
+| Data Storage | MySQL, CSV |
 | Visualization | Power BI |
 | Version Control | Git |
 
@@ -246,4 +245,4 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 
 **Kenneth Nguyen**
 
-[LinkedIn](#) | [Portfolio](#)
+[LinkedIn](https://www.linkedin.com/in/kennethnguyenhtx/) | [Portfolio](https://github.com/kennethnguyenhtx-hub)
