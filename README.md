@@ -1,5 +1,6 @@
-# Enterprise-Cloud-Outage-Analysis
-Analyzing the financial impact of cloud outages on major U.S. enterprises through SEC 10-K filings
+# Enterprise Cloud Outage Analysis
+
+Analyzing the financial impact of cloud outages on major U.S. enterprises through SEC 10-K filings.
 
 <p>
   <img src="./Dashboard1.png" width="500" height="290"/>
@@ -10,58 +11,66 @@ Analyzing the financial impact of cloud outages on major U.S. enterprises throug
 
 ## Executive Summary
 
-Cloud-based infrastructure has become the strategy for many modern enterprises for their daily operations. Yet when major providers experience outages, seen with AWS's multi-hour disruptions and Azure global service failures, the financial impact can be seen across the market.
+Cloud-based infrastructure has become a core strategy for many modern enterprises in their daily operations. Yet when major providers experience outages, seen with AWS's multi-hour disruptions and Azure global service failure, the financial impact can be seen across the market.
 
-This project answers the question: **How much revenue is at risk when cloud providers go down?**
+This project answers the question: 
+> **How much revenue is at risk when cloud providers go down?**
 
-By parsing 12000+ SEC 10-K filings from 2500+ companies (2020-2025), I mapped each of them and their dependencies to specific cloud providers and calculated hourly revenue exposure during ~34 major outages.
+By parsing 12,000+ SEC 10-K filings from 2,500+ companies (2020–2025), I mapped each company's dependencies to specific cloud providers and calculated hourly revenue exposure during ~34 major outages.
+
+---
 
 ## Motivation
 
-With the recent news of outages from major cloud providers, I wanted to explore and do a risk assessment on the financial impact an outage from one of the major cloud providers has on the market. When AWS experienced a DynamoDB/DNS Service Disruption (October 2025), operations across the internet halted up to 15 hours.
+With the recent news of outages from major cloud providers, I wanted to explore and do a risk assessment on the financial impact an outage from one of the major cloud providers has on the market. When AWS experienced a DynamoDB/DNS Service Disruption (October 2025), operations across the internet halted for up to 15 hours.
 
-**PROBLEM**: Companies don't voluntarily disclose their cloud architecture details and third-party databases are incomplete or expensive.
+> **Problem:** Companies don't voluntarily disclose their cloud architecture details, and third-party databases are incomplete or expensive.
 
-**MY SOLUTION**: Leverage SEC-mandated 10-K filings, specifically the Risk Factors section (Item 1A), where companies are legally required to disclose material risks to their business operations, including technology dependencies.
+> **My Solution:** Leverage SEC-mandated 10-K filings, specifically the Risk Factors section (Item 1A), where companies are legally required to disclose material risks to their business operations, including technology dependencies.
 
-This approach transforms required annual documents into a unique data for cloud dependency mapping for over 2500 enterprises that is difficult to get hands on elsewhere in the public domain.
+This approach transforms required annual documents into unique data for cloud dependency mapping for over 2,500 enterprises—information that is difficult to find elsewhere in the public domain.
 
 ---
 
 ## Key Findings
 
 - **AWS dominates enterprise cloud adoption** at 70% market share among companies disclosing specific providers
-- **Cloud dependency is accelerating**: 62% of companies mentioned cloud reliance in 2020 filings vs. 77.6% in 2025
-- **A single AWS outage (DynamoDB/DNS Disruption, Oct 2025)** put $2.5+ billion in total revenue at risk across 214 affected companies
-- **Information Technology, Communication, and Financial sectors** show the highest cloud concentration risk while **Real Estate, Consumer Staples, and Material sectors** show little reliance to cloud services.
+- **Cloud dependency is accelerating:** 62% of companies mentioned cloud reliance in 2020 filings vs. 77.6% in 2025
+- **A single AWS outage (DynamoDB/DNS Disruption, Oct 2025)** put $2.5B+ in total revenue at risk across 214 affected companies
+- **Information Technology, Communication, and Financial sectors** show the highest cloud concentration risk, while **Real Estate, Consumer Staples, and Materials sectors** show little reliance on cloud services
 
-### 1. Market Composition
+---
+
+## Analysis
+
+### Market Composition
 
 The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
-![Breakdown by Company Count](./Breakdown%20by%20Company%20Count.png) ![Breakdown by Market Cap](./Breakdown%20by%20Market%20Cap.png) 
+![Breakdown by Company Count](./Breakdown%20by%20Company%20Count.png)
+![Breakdown by Market Cap](./Breakdown%20by%20Market%20Cap.png)
 
-### 2. Cloud Adoption Trend (2020-2025)
+### Cloud Adoption Trend (2020–2025)
 
-![Cloud Adoption Trend](./Cloud%20Adoption%20Trend.png) 
+![Cloud Adoption Trend](./Cloud%20Adoption%20Trend.png)
 
-**Insight**: A 15+ percentage point increase in cloud risk disclosures over 5 years reflects accelerating enterprise cloud migration.
+> **Insight:** A 15+ percentage point increase in cloud risk disclosures over 5 years reflects accelerating enterprise cloud migration.
 
-![No Mention Graphic](./No%20Mention%20Graphic.png) 
+![No Mention Graphic](./No%20Mention%20Graphic.png)
 
-**Insight**: 25% of enterprises do not mention relying on cloud services or find it not as important.
+> **Insight:** 25% of enterprises do not mention relying on cloud services or find it not material enough to disclose.
 
-### 3. Provider Market Share (Among Specific Disclosures)
+### Provider Market Share
 
-![Provider Market Share](./Provider%20Market%20Share.png) 
+![Provider Market Share](./Provider%20Market%20Share.png)
 
-*Note: Totals exceed 100% due to multi-cloud deployments.*
+> *Note: Totals exceed 100% due to multi-cloud deployments.*
 
-### 4. Sector-Provider Dependency Heatmap
+### Sector-Provider Dependency Heatmap
 
-![Sector-Provider Dependency Heatmap](./Sector-Provider%20Dependency%20Heatmap.png) 
+![Sector-Provider Dependency Heatmap](./Sector-Provider%20Dependency%20Heatmap.png)
 
-**Insight**: IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most seen in Communication and Consumer Discretionary sectors.
+> **Insight:** IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most pronounced in Communication and Consumer Discretionary sectors.
 
 ---
 
@@ -69,13 +78,15 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ### Summary by Provider
 
-![Summary by Provider](./Summary%20by%20Provider.png) 
+![Summary by Provider](./Summary%20by%20Provider.png)
+
+---
 
 ### 1. AWS: DynamoDB/DNS Service Disruption (October 2025)
 
-**One of the largest cloud disruption in recent news.**
+**One of the largest cloud disruptions in recent news.**
 
-![AWS Outage Summary](./AWS%20Outage%20summary.png) 
+![AWS Outage Summary](./AWS%20Outage%20summary.png)
 
 | Metric | Value |
 |--------|-------|
@@ -99,9 +110,11 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 - Information Technology: $37M/hour
 - Communication: $36M/hour
 
+---
+
 ### 2. Azure: Firewall and Data Explorer Outage (June 2022)
 
-![Azure Outage Summary](./Azure%20Outage%20Summary.png) 
+![Azure Outage Summary](./Azure%20Outage%20Summary.png)
 
 | Metric | Value |
 |--------|-------|
@@ -120,9 +133,12 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 | Medtronic | Health Care | $3.7M |
 | ServiceNow | Information Technology | $1.3M |
 
+
+---
+
 ### 3. GCP: Fiber Cuts Network Disruption (June 2022)
 
-![GCP Outage Summary](./GCP%20Outage%20Summary.png) 
+![GCP Outage Summary](./GCP%20Outage%20Summary.png)
 
 | Metric | Value |
 |--------|-------|
@@ -131,17 +147,17 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 | Hourly Revenue at Risk | $98.16M |
 | **Total Revenue at Risk** | **$294M** |
 
-**Notable Insight**: Despite GCP's smaller market share, its per-hour impact rivals AWS due to high-revenue companies like Alphabet (Google) being self-hosted on GCP infrastructure.
+**Notable Insight:** Despite GCP's smaller market share, its per-hour impact rivals AWS due to high-revenue companies like Alphabet (Google) being self-hosted on GCP infrastructure.
 
 ---
 
 ## Methodology
 
-### 1. Data Extraction Pipeline
-![ETL Pipeline](./ETL%20Pipeline.png) 
+### Data Extraction Pipeline
 
+![ETL Pipeline](./ETL%20Pipeline.png)
 
-### 2. Cloud Provider Detection
+### Cloud Provider Detection
 
 I targeted five major cloud infrastructure providers based on market dominance:
 
@@ -153,7 +169,7 @@ I targeted five major cloud infrastructure providers based on market dominance:
 | Oracle | Oracle Cloud Infrastructure, OCI |
 | IBM | IBM Cloud, IBM Watson |
 
-### 3. Classification System
+### Classification System
 
 Each company was categorized into one of three buckets based on 10-K content:
 
@@ -163,15 +179,15 @@ Each company was categorized into one of three buckets based on 10-K content:
 | **General Cloud** | Mentions cloud dependency without naming providers | 1,626 |
 | **No Cloud Mention** | No cloud-related risk factors disclosed | 628 |
 
-### 4. Context-Aware Scoring
+### Context-Aware Scoring
 
-A critical challenge: distinguishing between companies that *use* a cloud provider versus those that *compete* with one (e.g., AWS mentioning Azure as a competitor, not a dependency).
+Problem: distinguishing between companies that *use* a cloud provider versus those that *compete* with one (e.g., AWS mentioning Azure as a competitor, not a dependency).
 
-**Solution**: Implemented a context scoring algorithm to classify cloud provider dependencies in 10-K filings. The algorithm analyzes surrounding sentences using regex pattern matching, assigning higher scores to dependency indicators like "rely," "depend," "utilize," and "infrastructure," while lower scores for wordings like "competitor" and "compete."
+**Solution:** Implemented a context scoring algorithm to classify cloud provider dependencies in 10-K filings. The algorithm analyzes surrounding sentences using regex pattern matching, assigning higher scores to dependency indicators like "rely," "depend," "utilize," and "infrastructure," while assigning lower scores for wordings like "competitor" and "compete."
 
-### 5. Revenue Risk Calculation
+### Revenue Risk Calculation
 
-Pulled in market data using Yahoo Finance API (yfinance) for each companies annual revenue and market capitalization. From there I can calculate the hourly revenue and determine the total revenue at risk during each outage.
+Pulled in market data using Yahoo Finance API (yfinance) for each company's annual revenue and market capitalization. From there, I calculated the hourly revenue and determined the total revenue at risk during each outage.
 
 ```
 Hourly Revenue = Annual Revenue (2024) / 8,760 hours
@@ -183,40 +199,23 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 
 ## Data Schema
 
-### Entity Relationship Diagram
-![Data Schema](./image%20of%20diagram.png) 
+![Data Schema](./image%20of%20diagram.png)
 
 ---
 
 ## Limitations & Assumptions
 
-### Methodological Constraints
+1. **Multi-Cloud Reality Understated:** Russell 3000 companies likely employ multi-cloud or hybrid architectures with failover capabilities. This analysis models a worst-case scenario where primary cloud dependencies experience complete service interruption without redundancy.
 
-1. **Multi-Cloud Reality Understated**
-   
-   Russell 3000 companies likely employ multi-cloud or hybrid architectures with failover capabilities. This analysis models a worst-case scenario where primary cloud dependencies experience complete service interruption without redundancy.
+2. **Revenue Timing Not Modeled:** Hourly revenue calculations assume uniform revenue distribution across all hours. In reality, a retail company's 1 AM outage impacts revenue differently than a 1 PM outage. Time-of-day and seasonality adjustments were not applied.
 
-2. **Revenue Timing Not Modeled**
-   
-   Hourly revenue calculations assume uniform revenue distribution across all hours. In reality, a retail company's 1 AM outage impacts revenue differently than a 1 PM outage. Time-of-day and seasonality adjustments were not applied.
+3. **Provider Disclosure Gaps:** Companies in the "General Cloud" category (1,626) acknowledge cloud dependency but don't specify providers. This may reflect security-conscious disclosure practices (common in financial services) or multi-cloud strategies without a dominant provider.
 
-3. **Provider Disclosure Gaps**
-   
-   Companies in the "General Cloud" category (1,626) acknowledge cloud dependency but don't specify providers.
-   - Security-conscious disclosure practices (common in financial services)
-   - Multi-cloud strategies without a dominant provider
+4. **Competitor vs. Dependency Disambiguation:** While the context-scoring algorithm handles most edge cases, some misclassifications may occur when companies discuss cloud providers in mixed contexts.
 
-4. **Competitor vs. Dependency Disambiguation**
-   
-   While the context-scoring algorithm handles most edge cases, some misclassifications may occur when companies discuss cloud providers in mixed contexts.
+5. **2024 Revenue Baseline:** All revenue-at-risk calculations use 2024 annual revenue, which represents the most complete and recent fiscal year data available at time of analysis.
 
-5. **2024 Revenue Baseline**
-   
-   All revenue-at-risk calculations use 2024 annual revenue, which represents the most complete and recent fiscal year data available at time of analysis.
-
-6. **Sector Revenue Distribution**
-   
-   Different sectors have varying revenue models. A subscription SaaS company may experience immediate revenue impact during an outage, while a manufacturing company with cloud-dependent logistics may see delayed effects.
+6. **Sector Revenue Distribution:** Different sectors have varying revenue models. A subscription SaaS company may experience immediate revenue impact during an outage, while a manufacturing company with cloud-dependent logistics may see delayed effects.
 
 ---
 
@@ -226,10 +225,10 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 
 | Component | Technology |
 |-----------|------------|
-| Data Extraction | Python 3.9+, SEC EDGAR API |
-| Text Processing | Regex, NLTK (NLP) |
+| Data Extraction | Python, SEC EDGAR API |
+| Text Processing | Pandas, Regex, NLTK |
 | Financial Data | yfinance |
-| Data Storage | PostgreSQL / CSV |
+| Data Storage | PostgreSQL, CSV |
 | Visualization | Power BI |
 | Version Control | Git |
 
@@ -237,11 +236,14 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 
 | Source | Purpose | Records |
 |--------|---------|---------|
-| SEC EDGAR API | 10-K filings (2020-2025) | ~12,000 documents |
-| Yahoo Finance (yfinance) | Company financials, sector classification | ~2,700 companies |
-| Public Outage Reports | Historical cloud outages | 36 incidents |
+| SEC EDGAR API | 10-K filings (2020–2025) | ~12,000 documents |
+| Yahoo Finance (yfinance) | Company financials, sector classification | 2,500+ companies |
+| Public Outage Reports | Historical cloud outages | ~34 incidents |
+
+---
 
 ## Author
 
 **Kenneth Nguyen**
-[LinkedIn](#) | [Portfolio](#) 
+
+[LinkedIn](#) | [Portfolio](#)
