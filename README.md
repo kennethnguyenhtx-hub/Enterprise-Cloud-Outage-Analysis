@@ -15,9 +15,9 @@ By parsing 12000+ SEC 10-K filings from 2500+ companies (2020-2025), I mapped ea
 
 With the recent news of outages from major cloud providers, I wanted to explore and do a risk assessment on the financial impact an outage from one of the major cloud providers has on the market. When AWS experienced a DynamoDB/DNS Service Disruption (October 2025), operations across the internet halted up to 15 hours.
 
-**Problem**: Companies don't voluntarily disclose their cloud architecture details and third-party databases are incomplete or expensive.
+**PROBLEM**: Companies don't voluntarily disclose their cloud architecture details and third-party databases are incomplete or expensive.
 
-**My Solution**: Leverage SEC-mandated 10-K filings, specifically the Risk Factors section (Item 1A), where companies are legally required to disclose material risks to their business operations, including technology dependencies.
+**MY SOLUTION**: Leverage SEC-mandated 10-K filings, specifically the Risk Factors section (Item 1A), where companies are legally required to disclose material risks to their business operations, including technology dependencies.
 
 This approach transforms required annual documents into a unique data for cloud dependency mapping for over 2500 enterprises that is difficult to get hands on elsewhere in the public domain.
 
@@ -27,7 +27,7 @@ This approach transforms required annual documents into a unique data for cloud 
 
 - **AWS dominates enterprise cloud adoption** at 70% market share among companies disclosing specific providers
 - **Cloud dependency is accelerating**: 62% of companies mentioned cloud reliance in 2020 filings vs. 77.6% in 2025
-- **A single AWS outage (Kinesis Event, Nov 2020)** put $3+ billion in total revenue at risk across 214 affected companies
+- **A single AWS outage (DynamoDB/DNS Disruption, Oct 2025)** put $2.5+ billion in total revenue at risk across 214 affected companies
 - **Information Technology, Communication, and Financial sectors** show the highest cloud concentration risk while **Real Estate, Consumer Staples, and Material sectors** show little reliance to cloud services.
 
 ### Market Composition
