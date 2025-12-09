@@ -1,6 +1,11 @@
 # Enterprise-Cloud-Outage-Analysis
 Analyzing the financial impact of cloud outages on major U.S. enterprises through SEC 10-K filings
 
+<p>
+  <img src="./Dashboard1.png" width="500" height="290"/>
+  <img src="./Dashboard2.png" width="500" height="270"/>
+</p>
+
 ---
 
 ## Executive Summary
@@ -30,13 +35,13 @@ This approach transforms required annual documents into a unique data for cloud 
 - **A single AWS outage (DynamoDB/DNS Disruption, Oct 2025)** put $2.5+ billion in total revenue at risk across 214 affected companies
 - **Information Technology, Communication, and Financial sectors** show the highest cloud concentration risk while **Real Estate, Consumer Staples, and Material sectors** show little reliance to cloud services.
 
-### Market Composition
+### 1. Market Composition
 
 The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ![Breakdown by Company Count](./Breakdown%20by%20Company%20Count.png) ![Breakdown by Market Cap](./Breakdown%20by%20Market%20Cap.png) 
 
-### Cloud Adoption Trend (2020-2025)
+### 2. Cloud Adoption Trend (2020-2025)
 
 ![Cloud Adoption Trend](./Cloud%20Adoption%20Trend.png) 
 
@@ -46,17 +51,17 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 **Insight**: 25% of enterprises do not mention relying on cloud services or find it not as important.
 
-### Provider Market Share (Among Specific Disclosures)
+### 3. Provider Market Share (Among Specific Disclosures)
 
 ![Provider Market Share](./Provider%20Market%20Share.png) 
 
 *Note: Totals exceed 100% due to multi-cloud deployments.*
 
-### Sector-Provider Dependency Heatmap
+### 4. Sector-Provider Dependency Heatmap
 
 ![Sector-Provider Dependency Heatmap](./Sector-Provider%20Dependency%20Heatmap.png) 
 
-**Insight**: IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most pronounced in Communication and Consumer Discretionary sectors.
+**Insight**: IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most seen in Communication and Consumer Discretionary sectors.
 
 ---
 
@@ -66,7 +71,7 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 
 ![Summary by Provider](./Summary%20by%20Provider.png) 
 
-### AWS: DynamoDB/DNS Service Disruption (October 2025)
+### 1. AWS: DynamoDB/DNS Service Disruption (October 2025)
 
 **One of the largest cloud disruption in recent news.**
 
@@ -94,7 +99,7 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 - Information Technology: $37M/hour
 - Communication: $36M/hour
 
-### Azure: Firewall and Data Explorer Outage (June 2022)
+### 2. Azure: Firewall and Data Explorer Outage (June 2022)
 
 ![Azure Outage Summary](./Azure%20Outage%20Summary.png) 
 
@@ -115,7 +120,7 @@ The analysis covers $72.78 trillion in market capitalization across 11 sectors:
 | Medtronic | Health Care | $3.7M |
 | ServiceNow | Information Technology | $1.3M |
 
-### GCP: Fiber Cuts Network Disruption (June 2022)
+### 3. GCP: Fiber Cuts Network Disruption (June 2022)
 
 ![GCP Outage Summary](./GCP%20Outage%20Summary.png) 
 
@@ -180,64 +185,6 @@ Revenue at Risk (per outage) = Hourly Revenue × Outage Duration (hours)
 
 ### Entity Relationship Diagram
 ![Data Schema](./image%20of%20diagram.png) 
-
-## Key Insights
-
-### Market Composition
-
-The analysis covers $72.78 trillion in market capitalization across 11 sectors:
-
-| Sector | Market Cap | Company Count |
-|--------|------------|---------------|
-| Information Technology | $22.7T | 325 |
-| Financials | $8.7T | 485 |
-| Consumer Discretionary | $7.7T | 296 |
-| Health Care | $6.6T | 464 |
-| Communication | $10.7T | 117 |
-| Industrials | $6.4T | 402 |
-| Consumer Staples | $3.4T | 125 |
-| Energy | $2.0T | 126 |
-| Materials | $1.4T | 161 |
-| Real Estate | — | 161 |
-| Utilities | — | 68 |
-
-### Cloud Adoption Trend (2020-2025)
-
-| Year | % Mentioning Cloud Dependency |
-|------|------------------------------|
-| 2020 | 62.0% |
-| 2021 | 64.8% |
-| 2022 | 69.6% |
-| 2023 | 71.7% |
-| 2024 | 75.5% |
-| 2025 | 77.6% |
-
-**Insight**: A 15+ percentage point increase in cloud risk disclosures over 5 years reflects accelerating enterprise cloud migration.
-
-### Provider Market Share (Among Specific Disclosures)
-
-| Provider | Share |
-|----------|-------|
-| AWS | 70% |
-| Azure | 26% |
-| GCP | 20% |
-| Oracle | <5% |
-| IBM | <5% |
-
-*Note: Totals exceed 100% due to multi-cloud deployments.*
-
-### Sector-Provider Dependency Heatmap
-
-| Sector | AWS | Azure | GCP | IBM | Oracle |
-|--------|-----|-------|-----|-----|--------|
-| Information Technology | 105 | 62 | 40 | 1 | 4 |
-| Communication | 28 | — | 6 | — | — |
-| Consumer Discretionary | 22 | 2 | 5 | — | — |
-| Financials | 18 | 4 | 3 | — | — |
-| Health Care | 13 | 7 | 4 | — | — |
-| Industrials | 19 | 6 | 3 | — | 1 |
-
-**Insight**: IT sector shows highest absolute cloud dependency (207 provider mentions). AWS dominance is most pronounced in Communication and Consumer Discretionary sectors.
 
 ---
 
