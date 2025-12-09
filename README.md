@@ -28,7 +28,7 @@ With the recent news of outages from major cloud providers, I wanted to explore 
 
 > **My Solution:** Leverage SEC-mandated 10-K filings, specifically the Risk Factors section (Item 1A), where companies are legally required to disclose material risks to their business operations, including technology dependencies.
 
-This approach transforms required annual documents into unique data for cloud dependency mapping for over 2,500 enterprises—information that is difficult to find elsewhere in the public domain.
+This approach transforms required annual documents into unique data for cloud dependency mapping for over 2,500 enterprises, information that is difficult to find elsewhere in the public domain.
 
 ---
 
